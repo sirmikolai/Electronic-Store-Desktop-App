@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32328.378
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElectronicStoreWpfAndSqlLite", "ElectronicStoreWpfAndSqlLite\ElectronicStoreWpfAndSqlLite.csproj", "{EF5DAB97-4942-4A83-865B-DA03C839BB25}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EF5DAB97-4942-4A83-865B-DA03C839BB25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF5DAB97-4942-4A83-865B-DA03C839BB25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF5DAB97-4942-4A83-865B-DA03C839BB25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF5DAB97-4942-4A83-865B-DA03C839BB25}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BE38A34E-DF42-454A-B905-17D02D63B0C0}
+	EndGlobalSection
+EndGlobal

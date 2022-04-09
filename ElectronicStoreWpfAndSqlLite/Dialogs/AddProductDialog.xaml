@@ -1,0 +1,47 @@
+﻿<Window x:Class="ElectronicStoreWpfAndSqlLite.Dialogs.AddProductDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ElectronicStoreWpfAndSqlLite.Dialogs"
+        mc:Ignorable="d"
+        Title="Dodaj produkt" Height="330" Width="400" ResizeMode="NoResize">
+    <Grid Margin="5" x:Name="AddProductGrid">
+        <Grid.BindingGroup>
+            <BindingGroup/>
+        </Grid.BindingGroup>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="0" Grid.Column="0" Content="Typ produktu:" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,20,0"/>
+        <ComboBox x:Name="TypeOfProduct" Grid.Row="0" Text="{Binding TypeOfProduct}" Grid.Column="1" Margin="5, 10, 10 , 10"/>
+
+        <Label Grid.Row="1" Grid.Column="0" Content="Producent:" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,20,0"/>
+        <TextBox x:Name="Producer"  Grid.Row="1" Grid.Column="1" Text="{Binding Producer}" Margin="5, 10, 10, 10" MaxLength="255"/>
+
+        <Label Grid.Row="2" Grid.Column="0" Content="Model:" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,20,0"/>
+        <TextBox x:Name="Model"  Grid.Row="2" Grid.Column="1" Text="{Binding Model}" Margin="5, 10, 10, 10" MaxLength="255"/>
+
+        <Label Grid.Row="3" Grid.Column="0" Content="Rok produkcji:" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,20,0"/>
+        <TextBox x:Name="YearOfProduction"  Grid.Row="3" Grid.Column="1" Text="{Binding YearOfProduction}" Margin="5, 10, 10, 10" PreviewTextInput="YearOfProductionPreviewInput" LostKeyboardFocus="YearOfProductionHelper" MaxLength="4"/>
+
+        <Label Grid.Row="4" Grid.Column="0" Content="Ilość:" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,20,0"/>
+        <TextBox x:Name="Quantity"  Grid.Row="4" Grid.Column="1" Text="{Binding Quantity}" Margin="5, 10, 10, 10" PreviewTextInput="QuantityPreviewInput" LostKeyboardFocus="QuantityHelper" MaxLength="6"/>
+
+        <Label Grid.Row="5" Grid.Column="0" Content="Cena:" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,20,0"/>
+        <TextBox x:Name="Price"  Grid.Row="5" Grid.Column="1" Text="{Binding Price}" Margin="5, 10, 10, 10" PreviewTextInput="PricePreviewInput" MaxLength="10"/>
+
+        <Button x:Name="Add" Grid.Row="6" Grid.ColumnSpan="3" Content="Dodaj" Margin="150, 10, 150, 10" Click="Dodaj_Click" />
+    </Grid>
+</Window>

@@ -1,0 +1,44 @@
+﻿<Window x:Class="ElectronicStoreWpfAndSqlLite.Dialogs.SellProductDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ElectronicStoreWpfAndSqlLite.Dialogs"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        mc:Ignorable="d"
+        Title="Sprzedaj produkt" Height="300" Width="400" ResizeMode="NoResize">
+    <Grid Margin="5" x:Name="SellProductGrid">
+        <Grid.BindingGroup>
+            <BindingGroup/>
+        </Grid.BindingGroup>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="0" Grid.Column="0" Content="Produkt:" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,20,0"/>
+        <Label x:Name="productNameLabel" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+
+        <Label Grid.Row="1" Grid.Column="0" Content="Klient:" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,20,0"/>
+        <ComboBox x:Name="clientsComboBox" Grid.Row="1" Grid.Column="1" Margin="5, 10, 10 , 10"/>
+
+        <Label Grid.Row="2" Grid.Column="0" Content="Ilość:" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,20,0" />
+        <TextBox x:Name="quantityOfTransaction" Grid.Row="2" Grid.Column="1" Text="{Binding QuantityOfTransaction}" PreviewTextInput="QuantityOfTransactionPreviewInput" Margin="5, 10, 10, 10" MaxLength="6" LostKeyboardFocus="PriceTextChanged"/>
+
+        <Label Grid.Row="3" Grid.Column="0" Content="Data transakcji:" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,20,0" />
+        <xctk:DateTimePicker x:Name="DateTimePicker" Grid.Row="3" Grid.Column="1" Text="{Binding DateOfTransaction}" FormatString="dd/MM/yyyy HH:mm" HorizontalAlignment="Left" FontSize="12" VerticalAlignment="Center" Format="Custom" CultureInfo="pl-PL" Margin="5, 0, 0, 0" Width="208" CalendarWidth="176"/>
+
+        <Label Grid.Row="4" Grid.Column="0" Content="Kwota:" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,20,0" />
+        <Label x:Name="priceOfTransaction" Grid.Row="4" Grid.Column="1" Content="{Binding PriceOfTransaction, ConverterCulture='pl-PL', StringFormat=c}" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+
+        <Button x:Name="Sell" Grid.Row="6" Grid.ColumnSpan="3" Content="Sprzedaj" Margin="150, 10, 150, 10" Click="Sprzedaj_Click" />
+    </Grid>
+</Window>
